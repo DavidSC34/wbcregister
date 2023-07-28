@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/user/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
