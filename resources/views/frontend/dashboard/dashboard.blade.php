@@ -9,75 +9,74 @@
         <div class="dashboard_content">
           <div class="wsus__dashboard">
             <div class="row">
-              <div class="col-xl-2 col-6 col-md-4">
-                <a class="wsus__dashboard_item red" href="dsahboard_order.html">
-                  <i class="far fa-address-book"></i>
-                  <p>order</p>
+              <div class="col-xl-4 col-6 col-md-4">
+                <a class="wsus__dashboard_item blue" href="{{route('user.tickets')}}">
+                  <i class="far fa-dollar-sign"></i>
+                  <p>Tickets and Pricing</p>
                 </a>
               </div>
-              <div class="col-xl-2 col-6 col-md-4">
-                <a class="wsus__dashboard_item green" href="dsahboard_download.html">
-                  <i class="fal fa-cloud-download"></i>
-                  <p>download</p>
+              <div class="col-xl-4 col-6 col-md-4">
+                <a class="wsus__dashboard_item green" href="{{route('user.agenda')}}">
+                  <i class="fal fa-calendar-alt"></i>
+                  <p>Agenda</p>
                 </a>
               </div>
-              <div class="col-xl-2 col-6 col-md-4">
-                <a class="wsus__dashboard_item sky" href="dsahboard_review.html">
-                  <i class="fas fa-star"></i>
-                  <p>review</p>
-                </a>
-              </div>
-              <div class="col-xl-2 col-6 col-md-4">
-                <a class="wsus__dashboard_item blue" href="dsahboard_wishlist.html">
-                  <i class="far fa-heart"></i>
-                  <p>wishlist</p>
-                </a>
-              </div>
-              <div class="col-xl-2 col-6 col-md-4">
-                <a class="wsus__dashboard_item orange" href="dsahboard_profile.html">
+            
+             
+              <div class="col-xl-4 col-6 col-md-4">
+                <a class="wsus__dashboard_item green" href="{{route('user.profile')}}">
                   <i class="fas fa-user-shield"></i>
                   <p>profile</p>
                 </a>
               </div>
-              <div class="col-xl-2 col-6 col-md-4">
-                <a class="wsus__dashboard_item purple" href="dsahboard_address.html">
-                  <i class="fal fa-map-marker-alt"></i>
-                  <p>address</p>
-                </a>
-              </div>
+             
             </div>
             <div class="row">
               <div class="col-xl-12">
                
                 <div class="wsus__message">
                   <h4>personal information</h4>
+                  <p class="mb-2">Please complete your information</p> 
                   <form action="#">
                     <div class="row">
-                      <div class="col-xl-6">
+                      <div class="col-xl-12">
                         <div class="wsus__single_inout">
-                          <label>first name</label>
-                          <input type="text" placeholder="First Name">
-                        </div>
-                      </div>
-                      <div class="col-xl-6">
-                        <div class="wsus__single_inout">
-                          <label>last name</label>
-                          <input type="text" placeholder="Last Name">
-                        </div>
-                      </div>
-                      <div class="col-xl-6">
-                        <div class="wsus__single_inout">
-                          <label>email</label>
-                          <input type="email" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="col-xl-6">
-                        <div class="wsus__single_inout">
-                          <label>phone</label>
-                          <input type="text" placeholder="Phone">
+                          <label>Name</label>
+                          <input type="text" placeholder="" value="{{Auth::user()->name}}">
                         </div>
                       </div>
                       <div class="col-xl-12">
+                        <div class="wsus__single_inout">
+                          <label>Email</label>
+                          <input type="email" placeholder="" value="{{Auth::user()->email}}">
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <div class="wsus__single_inout">
+                          <label>Phone</label>
+                          <input type="phone" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <div class="wsus__single_inout">
+                          <label>Birthdate</label>
+                          <input type="text" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <div class="wsus__single_inout">
+                          <label>Country</label>
+                          <input type="text" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-xl-12">
+                        <div class="wsus__single_inout">
+                          <label>Boxing Position</label>
+                          <input type="text" placeholder="">
+                        </div>
+                      </div>
+                      
+                      {{-- <div class="col-xl-12">
                         <div class="wsus__single_inout">
                           <label>Address</label>
                           <textarea cols="3" rows="3" placeholder="Write Your Address Here"></textarea>
@@ -88,7 +87,7 @@
                           <label>about yourself</label>
                           <textarea cols="3" rows="3" placeholder="Write About Yourself"></textarea>
                         </div>
-                      </div>
+                      </div> --}}
                     </div>
                     <button class="common_btn" type="submit">update</button>
                   </form>
